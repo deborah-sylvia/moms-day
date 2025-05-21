@@ -1,0 +1,134 @@
+.letterContainer {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  min-height: 420px;
+  background-color: var(--letter-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.letterContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--letter-color);
+}
+
+.letterContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.letterText {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  padding-left: 20px;
+}
+
+.letterText.visible {
+  opacity: 1;
+}
+
+.letterText h1 {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.letterText p {
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.imageContainer {
+  float: right;
+  margin: 0 0 16px 24px;
+}
+
+.imagePlaceholder {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.imagePlaceholder.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.imagePlaceholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.2) brightness(1.05);
+}
+
+.signature {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  margin-top: 32px !important;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .letterContainer {
+    max-width: 480px;
+    min-height: 600px;
+    padding: 40px;
+  }
+
+  .letterText h1 {
+    font-size: 42px;
+  }
+
+  .letterText p {
+    font-size: 24px;
+  }
+
+  .signature {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagePlaceholder {
+    width: 160px;
+    height: 160px;
+  }
+
+  .letterText {
+    padding: 10px;
+  }
+
+}
+
+.sideBySideContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 32px;
+}

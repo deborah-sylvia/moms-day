@@ -1,0 +1,35 @@
+.audioToggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.audioToggle:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.audioToggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 179, 37, 0.4);
+}
+
+@media (min-width: 768px) {
+  .audioToggle {
+    width: 48px;
+    height: 48px;
+  }
+}

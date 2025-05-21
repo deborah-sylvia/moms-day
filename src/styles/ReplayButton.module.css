@@ -1,0 +1,37 @@
+.replayButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--envelope-color);
+  border: 1px solid var(--envelope-border);
+  color: var(--text-primary);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 90px;
+  min-height: 44px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.replayButton:hover {
+  background-color: #FFF8E7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.replayButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230, 179, 37, 0.4);
+}
+
+@media (min-width: 768px) {
+  .replayButton {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
